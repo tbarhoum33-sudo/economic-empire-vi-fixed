@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Economic Empire VI — Market City 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="world"></div>
+  <div id="menu" class="overlay"><div class="panel center">
+    <p class="eyebrow">AP MICROECONOMICS • OPEN WORLD 3D</p>
+    <h1>ECONOMIC<br><em>EMPIRE VI</em></h1><h2>MARKET CITY</h2>
+    <p>Drive, invest, meet citizens, and master the market.</p>
+    <button id="start" class="primary">START GAME</button>
+    <p class="muted">WASD Move/Drive • E Mission • F Talk • R Enter Car • P Phone • Q Equip • Space Practice</p>
+  </div></div>
+  <div id="hud" class="hidden">
+    <header><strong>ECONOMIC <span>EMPIRE VI</span></strong><div class="stats"><div>CASH <b id="cash">$10,000</b></div><div>XP <b id="xp">0</b></div><div>MISSIONS <b id="progress">0/5</b></div></div></header>
+    <aside><b>MARKET CITY</b><p id="objective">Walk to the numbered glowing marker and press E.</p><p id="hint">WASD MOVE • E MISSION • F TALK • R CAR • P PHONE • Q EQUIP • SPACE TARGET</p></aside>
+    <footer><button id="phoneButton">📱 MARKETPHONE</button><button id="reset">RESTART</button></footer>
+  </div>
+  <div id="mission" class="overlay hidden"><div class="panel mission-panel">
+    <p class="eyebrow" id="category"></p><h2 id="missionName"></h2><p id="description"></p>
+    <h3 id="question"></h3><div id="answers"></div><p id="explanation" class="feedback hidden"></p>
+    <button id="next" class="primary hidden">CONTINUE</button><button id="closeMission">CLOSE</button>
+  </div></div>
+  <div id="phone" class="hidden"><div class="phone-header"><b>MARKETPHONE VI</b><button id="closePhone">✕</button></div>
+    <p class="eyebrow">YOUR BALANCE</p><h2 id="phoneBalance">$10,000</h2>
+    <nav><button data-tab="cars">CARS</button><button data-tab="businesses">BUSINESS</button><button data-tab="gear">GEAR</button></nav>
+    <div id="products"></div><p class="muted">Purchases are virtual and use your mission earnings.</p>
+  </div>
+  <div id="win" class="overlay hidden"><div class="panel center"><p class="eyebrow">MARKET CITY COMPLETED</p>
+    <h1>ECONOMIC <em>LEGEND</em></h1><h2 id="finalStats"></h2><button id="again" class="primary">PLAY AGAIN</button>
+  </div></div>
+  <div id="toast" class="hidden" role="status"></div>
+  <div id="error" class="hidden" role="alert"></div>
+  <script src="actions.js" defer></script>
+  <script type="module" src="world3d.js"></script>
+</body>
+</html>
